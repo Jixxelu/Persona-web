@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/meh-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0c1022;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    color: #ffffff;
+    display: inline-flex;
+    height: 60px;
+    width: 60px;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    left: 1px;
+    animation: slideRight 2s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18 px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    animation: slideTop .5s easr forwards;
+    animation-delay: calc(.2s * var (--i))
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background: linear-gradient(45deg, #F7CAC9, #B3CEE5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    max-width: 500px;
+
+}
+.home-content h3{
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0px 20px;
+}
+
+.home-content p{
+    line-height: 22px;
+}
+
+.home-socials a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:  40px;
+    height: 40px;
+    background: linear-gradient(45deg, #F7CAC9,#B3CEE5);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    margin: 30px 15px 30px 0;
+    text-decoration: none;
+    margin: 20px 0;
+    z-index: 1;
+}
+
+.home-socials a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #F7CAC9, #B3CEE5);
+    border-radius: 50%;
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.home-socials a:hover::before{
+    filter: blur(5px)
+
+}
+
+.home-socials a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0c1022;
+    border-radius: 50%;
+    transform: scale(.88);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.home-socials a:hover::after{
+    transform: scale(0);
+}
+
+
+.timeline{
+    max-width: 1200px;
+    margin: 100px auto;
+    
+}
+.gal{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: inline;
+    grid-template-columns: repeat(auto-fit, minmax (250px, 1fr));
+    grid-gap: 30px;
+}
+
+.gal img{
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
+    cursor: pointer;
+}
+
+.gal img:hover{
+    transform: scale(0.8) rotate(-10deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px #B3CEE5;
+
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 80px 50px 50px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.ikon{
+    background-image: url(images/ikon.jpg);
+}
+
+.ft{
+    background-image: url(images/ft.jpeg);
+}
+
+.exo{
+    background-image: url(images/exo.jpg);
+}
+
+.bc{
+    background-image: url(images/bc.jpg);
+}
+
+.svt{
+    background-image: url(images/svt.jpg);
+}
+
+.ml{
+    background-image: url(images/ml.jpeg);
+}
+
+.hwa{
+    background-image: url(images/hwa.jpg);
+}
+
+.gs{
+    background-image: url(images/gens.jpg);
+}
+
+.togethers{
+    background-image: url(images/2s.jpeg);
+}
+
+.wr{
+    background-image: url(images/wr.jpg);
+}
+
+
+
+
+.card:hover{
+    transform: translateY(-12px);
+}
+
+h5{
+    color: #000000;
+    text-shadow: 0 0 5px #2db2b2
+}
+
+.card p{
+    text-shadow: 0 0 5px #026075;
+    font-size: 10px;
+}
+
+
+/* KEYFRAMES ANIMATIONS */
+@keyframes slideRight{
+    0% {
+        transform: translateX (-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
